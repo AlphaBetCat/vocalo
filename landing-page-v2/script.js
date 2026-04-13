@@ -17,7 +17,6 @@ function formatCurrency(n) {
   return '$' + Math.round(n).toLocaleString('en-US');
 }
 
-// Animate number change
 function animateValue(el, newText) {
   el.classList.add('flash');
   el.textContent = newText;
@@ -46,15 +45,13 @@ if (callsSlider && valueSlider) {
 // Animated Stat Counters
 // ============================================
 function animateCounter(el, target, duration) {
-  const start = 0;
   const startTime = performance.now();
 
   function update(currentTime) {
     const elapsed = currentTime - startTime;
     const progress = Math.min(elapsed / duration, 1);
-    // Ease out cubic
     const eased = 1 - Math.pow(1 - progress, 3);
-    const current = Math.round(start + (target - start) * eased);
+    const current = Math.round(target * eased);
     el.textContent = current + '%';
 
     if (progress < 1) {
@@ -64,32 +61,59 @@ function animateCounter(el, target, duration) {
   requestAnimationFrame(update);
 }
 
-// Intersection Observer for stat counters
-const statNumbers = document.querySelectorAll('.problem-num[data-target]');
-const statsObserver = new IntersectionObserver((entries) => {
+// ============================================
+// Progress Bar Fill Animation
+// ============================================
+function animateProgressBar(bar, targetWidth, delay) {
+  setTimeout(() => {
+    bar.style.width = targetWidth + '%';
+  }, delay);
+}
+
+// ============================================
+// Problem Section Observer (counters + bars)
+// ============================================
+const problemCards = document.querySelectorAll('.problem-card');
+const problemObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      const el = entry.target;
-      const target = parseInt(el.getAttribute('data-target'), 10);
-      animateCounter(el, target, 1200);
-      statsObserver.unobserve(el);
+      const card = entry.target;
+      const delay = parseInt(card.getAttribute('data-delay') || '0', 10);
+
+      // Animate counter
+      const numEl = card.querySelector('.problem-num[data-target]');
+      if (numEl) {
+        const target = parseInt(numEl.getAttribute('data-target'), 10);
+        setTimeout(() => animateCounter(numEl, target, 1200), delay);
+      }
+
+      // Animate progress bar
+      const barFill = card.querySelector('.problem-bar-fill[data-width]');
+      if (barFill) {
+        const targetWidth = parseInt(barFill.getAttribute('data-width'), 10);
+        animateProgressBar(barFill, targetWidth, delay + 200);
+      }
+
+      problemObserver.unobserve(card);
     }
   });
 }, { threshold: 0.3 });
 
-statNumbers.forEach(el => statsObserver.observe(el));
+problemCards.forEach(card => problemObserver.observe(card));
 
 // ============================================
 // Scroll Animations
 // ============================================
-const animatedElements = document.querySelectorAll('.feature, .how-step, .plan, .roi-card');
+const animatedElements = document.querySelectorAll(
+  '.feature, .how-step, .how-connector, .plan, .roi-card, .demo-call-card, .guarantee, .testimonial-placeholder, .trust-bar-inner'
+);
+
 const scrollObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
-      // Stagger by 50ms per element
       setTimeout(() => {
         entry.target.classList.add('visible');
-      }, i * 50);
+      }, i * 60);
       scrollObserver.unobserve(entry.target);
     }
   });
@@ -101,21 +125,61 @@ animatedElements.forEach(el => {
 });
 
 // ============================================
-// Lead Form Submission
+// Nav scroll effect
+// ============================================
+const nav = document.querySelector('.nav');
+if (nav) {
+  let lastScroll = 0;
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.scrollY;
+    if (currentScroll > 50) {
+      nav.classList.add('nav-scrolled');
+    } else {
+      nav.classList.remove('nav-scrolled');
+    }
+    lastScroll = currentScroll;
+  }, { passive: true });
+}
+
+// ============================================
+// Lead Form Submission → Thank You Page
 // ============================================
 const leadForm = document.getElementById('leadForm');
+const thankYou = document.getElementById('thankYou');
+
 if (leadForm) {
   leadForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const formData = new FormData(leadForm);
     const data = Object.fromEntries(formData.entries());
 
+    // Disable button while submitting
+    const submitBtn = leadForm.querySelector('button[type="submit"]');
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+    }
+
     // TODO: Replace with n8n webhook URL once set up
     // const WEBHOOK_URL = 'https://YOUR_N8N_WEBHOOK';
-    // await fetch(WEBHOOK_URL, { method: 'POST', body: JSON.stringify(data), headers: {'Content-Type':'application/json'} });
+    // try {
+    //   await fetch(WEBHOOK_URL, {
+    //     method: 'POST',
+    //     body: JSON.stringify(data),
+    //     headers: { 'Content-Type': 'application/json' }
+    //   });
+    // } catch (err) {
+    //   console.error('Webhook error:', err);
+    // }
 
     console.log('Lead captured:', data);
-    leadForm.innerHTML = '<div style="text-align:center;padding:24px;"><h3 style="color:#0F172A;margin-bottom:12px;font-family:Poppins,sans-serif;">Got it — talk soon!</h3><p style="color:#475569;">We\'ll reach out within 1 hour to book your demo.</p></div>';
+
+    // Hide form, show thank-you
+    leadForm.style.display = 'none';
+    if (thankYou) {
+      thankYou.style.display = 'block';
+      thankYou.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
 
     // Meta Pixel conversion tracking (uncomment once pixel is live)
     // if (typeof fbq !== 'undefined') fbq('track', 'Lead');
@@ -127,7 +191,9 @@ if (leadForm) {
 // ============================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
-    const target = document.querySelector(this.getAttribute('href'));
+    const href = this.getAttribute('href');
+    if (href === '#') return;
+    const target = document.querySelector(href);
     if (target) {
       e.preventDefault();
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });

@@ -20,7 +20,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -30,34 +30,43 @@
   <div class="container nav-inner">
     <a href="#" class="logo-link"><img src="assets/logo.svg" alt="Vocalo" height="40"></a>
     <div class="nav-links">
-      <a href="#pricing">Pricing</a>
       <a href="#how">How It Works</a>
-      <a href="#demo" class="nav-cta">Book a Demo</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#demo" class="nav-cta">
+        Book a Demo
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
     </div>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
+  <div class="hero-glow hero-glow-1"></div>
+  <div class="hero-glow hero-glow-2"></div>
+  <div class="hero-grid-bg"></div>
   <div class="container hero-grid">
     <div class="hero-text">
       <div class="hero-badge">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+        <span class="hero-badge-dot"></span>
         14-day free trial · No contracts · Cancel anytime
       </div>
       <h1>Never Miss Another <span class="accent">Customer Call</span></h1>
-      <p class="hero-sub">Your 24/7 receptionist service. We answer every call, book appointments, follow up with leads, and manage your online reviews — so you never miss a customer.</p>
+      <p class="hero-sub">Your 24/7 receptionist service. We answer every call, book appointments, follow up with leads, and manage your online reviews — so you never lose another customer.</p>
       <div class="hero-ctas">
         <a href="#demo" class="btn btn-primary">
           Book a Free Demo
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </a>
-        <a href="tel:+15555555555" class="btn btn-secondary">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          Or call now: (555) 555-5555
+        <a href="tel:+15555555555" class="btn btn-ghost">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (555) 555-5555
         </a>
       </div>
-      <p class="hero-trust">Call our line and experience the product yourself</p>
+      <p class="hero-trust">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Call our line and experience the product yourself
+      </p>
     </div>
     <div class="hero-visual">
       <div class="phone-mockup">
@@ -79,6 +88,7 @@
           </div>
         </div>
       </div>
+      <div class="phone-glow"></div>
     </div>
   </div>
 </section>
@@ -88,19 +98,19 @@
   <div class="container">
     <div class="trust-bar-inner">
       <div class="trust-item">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         <span>24/7 Coverage</span>
       </div>
       <div class="trust-item">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        <span>Answers in 2 rings</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span>Answers in under 2 rings</span>
       </div>
       <div class="trust-item">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-        <span>No contracts</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <span>No contracts ever</span>
       </div>
       <div class="trust-item">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
         <span>Cancel anytime</span>
       </div>
     </div>
@@ -109,24 +119,31 @@
 
 <!-- PROBLEM -->
 <section class="problem">
+  <div class="problem-gradient"></div>
   <div class="container">
     <h2 class="section-title">Every missed call is a lost customer</h2>
     <div class="problem-grid">
-      <div class="problem-card">
+      <div class="problem-card" data-delay="0">
         <div class="problem-num" data-target="62">0%</div>
+        <div class="problem-bar"><div class="problem-bar-fill" data-width="62"></div></div>
         <p>of calls to small businesses go unanswered. Every one of those is a customer calling your competitor next.</p>
       </div>
-      <div class="problem-card">
+      <div class="problem-card" data-delay="100">
         <div class="problem-num" data-target="85">0%</div>
+        <div class="problem-bar"><div class="problem-bar-fill" data-width="85"></div></div>
         <p>of callers won't try you a second time. If you miss the call, they're gone. Only 20% leave a voicemail — and 67% of voicemails never get returned.</p>
       </div>
-      <div class="problem-card">
+      <div class="problem-card" data-delay="200">
         <div class="problem-num" data-target="78">0%</div>
+        <div class="problem-bar"><div class="problem-bar-fill" data-width="78"></div></div>
         <p>of customers buy from the first business that responds. Not the best one. The fastest one. Speed wins the job, every time.</p>
       </div>
     </div>
   </div>
 </section>
+
+<!-- SECTION DIVIDER -->
+<div class="section-divider divider-dark-to-light"></div>
 
 <!-- SOLUTION -->
 <section class="solution">
@@ -136,42 +153,42 @@
     <div class="solution-grid">
       <div class="feature">
         <div class="feature-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         </div>
         <h3>Every call answered</h3>
         <p>Calls picked up in 2 rings, 24/7/365. Nights, weekends, holidays, while you're on a job.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
         </div>
         <h3>Appointments booked</h3>
         <p>Directly into your calendar. Customers leave the call with a confirmed appointment.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         </div>
         <h3>Questions answered</h3>
         <p>Services, pricing, hours, location — all handled without bothering you.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 17 20 12 15 7"/><path d="M4 18v-2a4 4 0 0 1 4-4h12"/></svg>
         </div>
         <h3>Urgent calls transferred</h3>
         <p>Emergencies get routed straight to your cell so you never miss what matters most.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         </div>
         <h3>Text summary every call</h3>
         <p>You get a clean summary after every call so you know exactly what happened.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
         </div>
         <h3>Reviews on autopilot</h3>
         <p>Happy customers get asked for Google reviews automatically. Your reputation grows itself.</p>
@@ -193,7 +210,7 @@
           <p>Your business, your services, your hours, your pricing. Takes one day.</p>
         </div>
       </div>
-      <div class="how-connector"></div>
+      <div class="how-connector"><div class="how-connector-line"></div></div>
       <div class="how-step">
         <div class="how-num">2</div>
         <div class="how-content">
@@ -201,7 +218,7 @@
           <p>Forward your existing number or use our new one. Every call picked up instantly.</p>
         </div>
       </div>
-      <div class="how-connector"></div>
+      <div class="how-connector"><div class="how-connector-line"></div></div>
       <div class="how-step">
         <div class="how-num">3</div>
         <div class="how-content">
@@ -215,13 +232,14 @@
 
 <!-- DEMO CALL-IN -->
 <section class="demo-call">
+  <div class="demo-call-bg"></div>
   <div class="container">
     <div class="demo-call-card">
       <div class="demo-call-text">
         <h2>Hear it yourself</h2>
         <p>Don't take our word for it. Call our demo line right now and talk to the same receptionist your customers would talk to.</p>
-        <a href="tel:+15555555555" class="btn btn-primary btn-lg">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <a href="tel:+15555555555" class="btn btn-accent btn-lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           Call (555) 555-5555
         </a>
         <span class="demo-call-note">Takes 2 minutes. No signup required.</span>
@@ -231,7 +249,7 @@
         <div class="pulse-ring pulse-ring-2"></div>
         <div class="pulse-ring pulse-ring-3"></div>
         <div class="pulse-icon">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         </div>
       </div>
     </div>
@@ -244,31 +262,33 @@
     <h2 class="section-title">How much are missed calls costing you?</h2>
     <p class="section-sub">Drag the sliders to see your numbers</p>
     <div class="roi-card">
-      <div class="roi-input">
-        <label>Calls you miss per week</label>
-        <div class="slider-row">
-          <input type="range" id="callsSlider" min="1" max="50" value="10" step="1">
-          <span class="slider-value" id="callsValue">10</span>
+      <div class="roi-inputs">
+        <div class="roi-input">
+          <label>Calls you miss per week</label>
+          <div class="slider-row">
+            <input type="range" id="callsSlider" min="1" max="50" value="10" step="1">
+            <span class="slider-value" id="callsValue">10</span>
+          </div>
         </div>
-      </div>
-      <div class="roi-input">
-        <label>Average value of one job or customer</label>
-        <div class="slider-row">
-          <input type="range" id="valueSlider" min="200" max="10000" value="800" step="100">
-          <span class="slider-value" id="valueValue">$800</span>
+        <div class="roi-input">
+          <label>Average value of one job or customer</label>
+          <div class="slider-row">
+            <input type="range" id="valueSlider" min="200" max="10000" value="800" step="100">
+            <span class="slider-value" id="valueValue">$800</span>
+          </div>
         </div>
       </div>
       <div class="roi-output">
         <div class="roi-stat">
           <div class="roi-label">You're losing approximately</div>
-          <div class="roi-amount" id="lossAmount">$38,400</div>
+          <div class="roi-amount" id="lossAmount">$34,640</div>
           <div class="roi-label">per month in missed revenue</div>
         </div>
         <div class="roi-divider"></div>
         <div class="roi-stat">
           <div class="roi-label">Vocalo costs</div>
           <div class="roi-amount small">$497/mo</div>
-          <div class="roi-label">Your ROI: <strong id="roiPercent">7,626%</strong></div>
+          <div class="roi-label">Your ROI: <strong id="roiPercent">6,870%</strong></div>
         </div>
       </div>
     </div>
@@ -338,6 +358,13 @@
       </div>
 
     </div>
+
+    <div class="guarantee">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <div>
+        <strong>Risk-free guarantee.</strong> If we don't book enough appointments to pay for your plan in the first 30 days, your next month is free. No questions asked.
+      </div>
+    </div>
   </div>
 </section>
 
@@ -346,14 +373,15 @@
   <div class="container">
     <h2 class="section-title">Join businesses that never miss a call</h2>
     <div class="testimonial-placeholder">
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-      <p>Real testimonials coming soon. Until then, try it yourself — 14 days free.</p>
+      <p>We're a new company. That's why we offer a 14-day free trial with zero commitment — so you can judge the results, not our marketing.</p>
+      <a href="#demo" class="btn btn-secondary">Try It Free</a>
     </div>
   </div>
 </section>
 
 <!-- CTA FORM -->
 <section class="cta" id="demo">
+  <div class="cta-glow"></div>
   <div class="container">
     <h2>Book your free demo</h2>
     <p class="cta-sub">15 minutes. No pressure. See exactly how it would work for your business.</p>
@@ -391,9 +419,38 @@
           <option value="other">Other</option>
         </select>
       </div>
-      <button type="submit" class="btn btn-primary btn-full">Book My Free Demo</button>
+      <button type="submit" class="btn btn-primary btn-full">
+        Book My Free Demo
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </button>
       <p class="form-trust">Or skip the form and call our line right now: <a href="tel:+15555555555">(555) 555-5555</a></p>
     </form>
+
+    <!-- Thank You State (hidden by default, shown after submission) -->
+    <div class="thank-you" id="thankYou" style="display:none;">
+      <div class="thank-you-card">
+        <div class="thank-you-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3>You're in — talk soon!</h3>
+        <p>We'll reach out within 1 hour to set up your demo.</p>
+        <div class="thank-you-steps">
+          <div class="ty-step">
+            <span class="ty-num">1</span>
+            <span>Check your phone — we'll call or text to confirm</span>
+          </div>
+          <div class="ty-step">
+            <span class="ty-num">2</span>
+            <span>We'll walk you through exactly how it works for your business</span>
+          </div>
+          <div class="ty-step">
+            <span class="ty-num">3</span>
+            <span>You'll be live within 24 hours of your demo</span>
+          </div>
+        </div>
+        <p class="ty-cta">Can't wait? <a href="tel:+15555555555">Call us now at (555) 555-5555</a></p>
+      </div>
+    </div>
   </div>
 </section>
 
